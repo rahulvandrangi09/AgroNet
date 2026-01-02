@@ -21,7 +21,7 @@
         );
       }
     </script>
-    <link rel="shortcut icon" href="Images/Doctor.jpg" type="image/png" />
+    <link rel="shortcut icon" href="Build/Doctor.jpg" type="image/png" />
     <link rel="stylesheet" href="getstarted.css" />
     <script
       type="text/javascript"
@@ -70,8 +70,9 @@
           <div class="container">
             <div class="box" data-aos="fade-up">
               <img
-                src="Images/wheat-field-waving-wind-field-background.jpg"
+                src="Build/wheat-field-waving-wind-field-background.jpg"
                 alt="Wheat"
+                loading="lazy"
               />
               <h3>Wheat (Rabi)</h3>
               <p>
@@ -83,7 +84,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/mustard.jpg" alt="Mustard" />
+              <img src="Build/mustard.jpg" alt="Mustard" loading="lazy" />
               <h3>Mustard (Rabi)</h3>
               <p>
                 Mustard is cultivated for its oil-rich seeds and pungent flavor.
@@ -94,7 +95,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/barley.jpg" alt="Barley" />
+              <img src="Build/barley.jpg" alt="Barley" loading="lazy" />
               <h3>Barley (Rabi)</h3>
               <p>
                 Barley is a hardy, fast-growing winter cereal. It’s used as
@@ -105,7 +106,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/rice.png" alt="Rice" />
+              <img src="Build/rice.png" alt="Rice" loading="lazy" />
               <h3>Rice (Kharif)</h3>
               <p>
                 Rice is India's main Kharif crop, grown during the monsoon. It
@@ -115,7 +116,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/maize.jpg" alt="Maize" />
+              <img src="Build/maize.jpg" alt="Maize" loading="lazy" />
               <h3>Maize (Kharif)</h3>
               <p>
                 Maize, also called corn, is a versatile Kharif crop. It is grown
@@ -126,7 +127,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/cotton.jpg" alt="Cotton" />
+              <img src="Build/cotton.jpg" alt="Cotton" loading="lazy" />
               <h3>Cotton (Kharif)</h3>
               <p>
                 Cotton is a fiber crop grown mainly in warm regions. It requires
@@ -136,7 +137,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/millets.jpg" alt="Millets" />
+              <img src="Build/millets.jpg" alt="Millets" loading="lazy" />
               <h3>Millets (Kharif)</h3>
               <p>
                 Millets include grains like jowar, bajra, and ragi. They are
@@ -147,7 +148,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/sugarcane.jpg" alt="Sugarcane" />
+              <img src="Build/sugarcane.jpg" alt="Sugarcane" loading="lazy" />
               <h3>Sugarcane (Kharif)</h3>
               <p>
                 Sugarcane is a long-duration Kharif crop grown in tropical
@@ -158,7 +159,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/watermelon.jpg" alt="Watermelon" />
+              <img src="Build/watermelon.jpg" alt="Watermelon" loading="lazy" />
               <h3>Watermelon (Zaid)</h3>
               <p>
                 Watermelon is a juicy, refreshing fruit grown in summer between
@@ -168,7 +169,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/cucumber.jpg" alt="Cucumber" />
+              <img src="Build/cucumber.jpg" alt="Cucumber" loading="lazy" />
               <h3>Cucumber (Zaid)</h3>
               <p>
                 Cucumber is a fast-growing Zaid crop, ideal for summer
@@ -179,7 +180,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/muskmelon.jpg" alt="Muskmelon" />
+              <img src="Build/muskmelon.jpg" alt="Muskmelon" loading="lazy" />
               <h3>Muskmelon (Zaid)</h3>
               <p>
                 Muskmelon is a popular Zaid fruit crop with a sweet fragrance.
@@ -190,7 +191,7 @@
               </p>
             </div>
             <div class="box" data-aos="fade-up">
-              <img src="Images/bottlegourd.webp" alt="Bottle Gourd" />
+              <img src="Build/bottlegourd.webp" alt="Bottle Gourd" loading="lazy" />
               <h3>Bottle Gourd (Zaid)</h3>
               <p>
                 Bottle gourd is a summer vegetable rich in water and nutrients.
@@ -254,22 +255,116 @@
 
       <!-- Image Recognition -->
       <section id="contact">
-        <h1 style="text-align: center">Image Recognition</h1>
-        <p style="text-align: center">
-          (Upload and detect plant diseases here...STATIC)
+        <h1 style="text-align: center; color: #00274D; margin-bottom: 10px;">
+          🌾 Crop Disease Detector
+        </h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+          Upload an image of your crop or plant to detect diseases and get treatment recommendations powered by AI
         </p>
 
-        <div style="text-align: center; padding: 20px">
-          <input
-            type="file"
-            accept="image/*"
-            onchange="previewAndDetect(this)"
-          />
-          <div class="loading-bar-container" id="loading-bar-container">
-            <div class="loading-bar" id="loading-bar"></div>
+        <div
+          style="
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <!-- Upload Section -->
+          <div
+            style="
+              border: 2px dashed #27ae60;
+              border-radius: 8px;
+              padding: 30px;
+              text-align: center;
+              background-color: #f9f9f9;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            "
+            id="upload-area"
+          >
+            <p style="font-size: 18px; color: #333; margin-bottom: 10px;">
+              📷 Click or drag image here
+            </p>
+            <p style="color: #999; font-size: 14px;">
+              Supported formats: JPG, PNG, WebP
+            </p>
+            <input
+              type="file"
+              accept="image/*"
+              id="imageInput"
+              onchange="previewAndDetect(this)"
+              style="display: none;"
+            />
+            <button
+              type="button"
+              onclick="document.getElementById('imageInput').click()"
+              style="
+                background-color: #27ae60;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 10px;
+                transition: background-color 0.3s ease;
+              "
+              onmouseover="this.style.backgroundColor='#219150'"
+              onmouseout="this.style.backgroundColor='#27ae60'"
+            >
+              Select Image
+            </button>
           </div>
-          <div id="preview-container" style="margin-top: 20px"></div>
-          <div id="disease-info"></div>
+
+          <!-- Loading Bar -->
+          <div
+            class="loading-bar-container"
+            id="loading-bar-container"
+            style="
+              display: none;
+              margin-top: 20px;
+              background-color: #f0f0f0;
+              border-radius: 8px;
+              overflow: hidden;
+              height: 8px;
+            "
+          >
+            <div
+              class="loading-bar"
+              id="loading-bar"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  #27ae60,
+                  #2ecc71,
+                  #27ae60
+                );
+                height: 100%;
+                width: 0%;
+                transition: width 0.3s ease;
+                box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
+              "
+            ></div>
+          </div>
+
+          <!-- Preview Container -->
+          <div
+            id="preview-container"
+            style="
+              margin-top: 20px;
+              text-align: center;
+              min-height: 200px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          ></div>
+
+          <!-- Disease Info -->
+          <div id="disease-info" style="margin-top: 20px;"></div>
         </div>
       </section>
     </div>
@@ -286,5 +381,51 @@
     </script>
 
     <script src="getstarted.js"></script>
+
+    <script>
+      // Image optimization script
+      document.addEventListener("DOMContentLoaded", function () {
+        // Optimize images with native lazy loading support
+        const images = document.querySelectorAll("img[loading='lazy']");
+        
+        // Add fade-in effect to lazy loaded images
+        images.forEach((img) => {
+          img.addEventListener("load", function () {
+            this.style.animation = "fadeIn 0.5s ease-in";
+          });
+        });
+
+        // Preload images that are near viewport
+        if ("IntersectionObserver" in window) {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                observer.unobserve(img);
+              }
+            });
+          });
+
+          images.forEach((img) => imageObserver.observe(img));
+        }
+      });
+
+      // Add fade-in animation
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes fadeIn {
+          from {
+            opacity: 0.7;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+
+    <script src="imageRecognition.js"></script>
   </body>
 </html>

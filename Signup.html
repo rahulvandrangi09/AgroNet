@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agronet - Login / Signup</title>
+  <title>Agronet - Signup</title>
   <link rel="stylesheet" href="Signup.css" />
-  <link rel="shortcut icon" href="Images/Doctor.jpg" type="image/png">
+  <link rel="shortcut icon" href="Build/Doctor.jpg" type="image/png">
 </head>
 
 <body>
@@ -26,45 +26,52 @@
       </div>
     
       <div id="nav-right">
-        <a href="Signup.html">Login</a> /<a href="Signup.html">Signup</a>
+        <a href="Login.html">Login</a> /<a href="Signup.html">Signup</a>
       </div>
     </div>
     <div id="form-wrapper">
       <div id="container">
         <div id="form-section">
-          <h2 id="title">Login to Agronet</h2>
-          <form id="login-form">
-            <div id="email-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" required />
-            </div>
-            <div id="password-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" required />
-            </div>
-            <button type="submit" id="submit-btn">Login</button>
-            <p id="toggle-text">Don't have an account? <a href="#">Sign up</a></p>
-          </form>
-          <div id="social-login">
-            <p>Or sign in with</p>
-            <div id="social-icons">
-              <a href="#"><img src="Images/gmail_5968534.png" alt="Gmail" /></a>
-              <a href="#"><img src="Images/facebook_5968764.png" alt="Facebook" /></a>
-              <a href="#"><img src="Images/twitter_5969020.png" alt="Twitter" /></a>
-            </div>
-          </div>          
+          <!-- Signup Form -->
+          <div id="signup-container" class="form-container active">
+            <h2 id="signup-title">Signup for Agronet</h2>
+            <form id="signup-form">
+              <div id="signup-email-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required />
+              </div>
+              <div id="signup-password-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required />
+              </div>
+              <div id="confirm-password-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required />
+              </div>
+              <button type="submit" id="signup-btn" class="submit-btn">Signup</button>
+              <p id="signup-toggle-text">Already have an account? <a href="Login.html" style="color: #00274D; font-weight: bold; text-decoration: none;">Login</a></p>
+            </form>
+            <div id="social-login-signup" class="social-login">
+              <p>Or sign up with</p>
+              <div id="social-icons-signup">
+                <a href="#"><img src="Build/gmail_5968534.png" alt="Gmail" /></a>
+                <a href="#"><img src="Build/facebook_5968764.png" alt="Facebook" /></a>
+                <a href="#"><img src="Build/twitter_5969020.png" alt="Twitter" /></a>
+              </div>
+            </div>          
+          </div>
         </div>
       </div>
     </div>
     <footer id="footer">
       <div class="footer-content">
-        <img src="Images/Logo.jpg" alt="FarmDoc Logo" />
+        <img src="Build/Doctor.jpg" alt="FarmDoc Logo" />
         <p>&copy; 2025 <span>Agronet</span>. All rights reserved.</p>
       </div>
     </footer>
   </div>
-  <script src="signup.js"></script>
   <script type="module" src="signup.js"></script>
 
 </body>
 </html>
+

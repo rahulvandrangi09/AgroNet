@@ -113,6 +113,8 @@ section {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
+    background-color: #f0f0f0;
+    display: block;
 }
 
 .box h3 {

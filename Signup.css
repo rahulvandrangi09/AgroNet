@@ -6,7 +6,7 @@
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
-  background-image: url(Images/plant.jpg);
+  background-image: url(Build/plant.jpg);
   background-size: cover;
 }
 
@@ -152,42 +152,85 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
-#title {
+.form-container {
+  display: none;
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.form-container.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#login-container,
+#signup-container {
+  width: 100%;
+}
+
+#login-title,
+#signup-title {
   margin-bottom: 20px;
   color: #00274D;
 }
 
 #email-group,
-#password-group {
+#password-group,
+#signup-email-group,
+#signup-password-group,
+#confirm-password-group {
   margin-bottom: 20px;
 }
 
 #email-group label,
-#password-group label {
+#password-group label,
+#signup-email-group label,
+#signup-password-group label,
+#confirm-password-group label {
   display: block;
   margin-bottom: 5px;
   color: #34495e;
 }
 
-#email,
-#password {
+#login-email,
+#login-password,
+#signup-email,
+#signup-password,
+#confirm-password {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
-#email:focus,
-#password:focus {
+#login-email:focus,
+#login-password:focus,
+#signup-email:focus,
+#signup-password:focus,
+#confirm-password:focus {
   outline: none;
   border-color: #27ae60;
   box-shadow: 0 0 5px rgba(39, 174, 96, 0.4);
 }
 
-#submit-btn {
+.submit-btn {
   width: 100%;
   padding: 12px;
   background-color: #27ae60;
@@ -200,70 +243,57 @@ body{
   transition: background-color 0.3s ease;
 }
 
-#submit-btn:hover {
+.submit-btn:hover {
   background-color: #219150;
 }
 
-#toggle-text {
+#login-toggle-text,
+#signup-toggle-text {
   margin-top: 15px;
   font-size: 14px;
   color: #555;
 }
 
-#toggle-text a {
+#login-toggle-text a,
+#signup-toggle-text a {
   color: #00274D;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }
 
-#social-login {
+#login-toggle-text a:hover,
+#signup-toggle-text a:hover {
+  text-decoration: underline;
+}
+
+.social-login {
   text-align: center;
   margin-top: 20px;
 }
 
-#social-login p {
+.social-login p {
   margin-bottom: 10px;
   color: #555;
 }
 
-#social-icons {
+#social-icons,
+#social-icons-signup {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-#social-icons a img {
+#social-icons a img,
+#social-icons-signup a img {
   width: 30px;
   height: 30px;
   transition: transform 0.3s ease;
 }
 
-#social-icons a img:hover {
+#social-icons a img:hover,
+#social-icons-signup a img:hover {
   transform: scale(1.1);
-}
-
-#confirm-password-group {
-  margin-bottom: 20px;
-}
-
-#confirm-password-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #34495e;
-}
-
-#confirm-password {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-#confirm-password:focus {
-  outline: none;
-  border-color: #27ae60;
-  box-shadow: 0 0 5px rgba(39, 174, 96, 0.4);
 }
 
 
